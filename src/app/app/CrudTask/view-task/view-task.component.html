@@ -1,0 +1,16 @@
+<section *ngIf="taskList.length>0">
+
+  <ul *ngFor="let item of taskList; let i = index">
+    <li>
+          <p>{{ item.task }}</p>
+          <input type="checkbox" (click)="onIsMark(item.checked!, item.id!)" [(ngModel)]="item.checked">
+          <button (click)="deleteTask(item.id!)">
+             <img src="../../../../../assets/icons/icon-trash.svg">
+          </button>
+
+          <a routerLink="/Update/{{ item.id }}">
+            Atualizar
+          </a>
+      </li>
+  </ul>
+</section>

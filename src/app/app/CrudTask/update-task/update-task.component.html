@@ -1,0 +1,8 @@
+<section>
+  <form (ngSubmit)="updateTask()">
+    <input name="tarefa" type="text" placeholder="Digite sua nova tarefa aqui..." [(ngModel)]="taskUpdate.task" (input)="onKeyUp()">
+    <p *ngIf="emptyInput==true"><span style="color: #f00;">Esse campo é obrigatório!</span></p>
+    <input type="submit" value="enviar">
+    </form>
+    <button (click)="cancel()">Cancelar</button>
+</section>

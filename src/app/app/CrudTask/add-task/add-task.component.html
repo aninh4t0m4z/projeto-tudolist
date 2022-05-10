@@ -1,0 +1,10 @@
+<form (ngSubmit)="newTask()">
+  <div class="img">
+    <img src= "../../../../../assets/img/bg-task.png" alt="">
+  </div>
+  <div class="input">
+  <input name="tarefa" type="text" placeholder="Digite sua tarefa " [(ngModel)]="addTask.task" (input)="onKeyUp()">
+  <input type="submit" value="enviar" class="enviar">
+  </div>
+  <p *ngIf="emptyInput==true" ><span style="color: #f00;">Esse campo é obrigatório!</span></p>
+  </form>
